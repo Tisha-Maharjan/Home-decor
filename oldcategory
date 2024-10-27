@@ -1,0 +1,64 @@
+<div class="container1">
+  <h2 class="text-center">Explore</h2>
+
+  <?php
+    
+      //get category title based on category id
+      $sql="SELECT * from category WHERE active='Yes'";
+    
+      //execute query
+      $res=mysqli_query($conn, $sql);
+
+      //count rows
+      $count=mysqli_num_rows($res);
+
+      //check whether products available or not
+      if($count>0){
+        //products available
+        while($row=mysqli_fetch_assoc($res)){
+          //get values
+          $id=$row['id'];
+          $title=$row['title'];
+          $image_name=$row['image_name'];
+
+          ?>
+  <a href="<?php echo $home?>category1.php?category_id=<?php echo $id;?>">
+    <div class="box-3 float-container">
+
+      <?php
+          //check whether image is available or not
+        if($image_name==""){
+          //image not available
+          echo "<div class='error'>Image not availabe</div>";
+          
+        }
+        else{
+          //image available
+          ?>
+      <img src="<?php echo $home; ?>img/category/<?php echo $image_name; ?>" alt="Image"
+        class="img-responsive img-curve" />
+      <?php
+        }
+          ?>
+
+      <h3 class="float-text">
+        <font color="black"><?php echo $title; ?></font>
+      </h3>
+    </div>
+  </a>
+
+  <?php
+      }
+      }
+    
+      else{
+      //products not available
+      echo "<div class='error'>Categories not added</div>";
+      }
+
+      ?>
+
+</div>
+<div class="order_btn1">
+  <a href="login.php" class="btn1" type="hidden"></a>
+</div>

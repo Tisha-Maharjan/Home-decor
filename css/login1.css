@@ -1,0 +1,102 @@
+/* Css for login */
+
+/*body background css*/
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background: url(../images/c3.jpg) no-repeat;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+}
+.main {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: auto;
+  height: auto;
+  /* flex-direction: row;*/
+}
+/*login form css*/
+.form {
+  width: 350px;
+  height: auto;
+  background-color: #f2f2f2;
+  padding: 50px;
+  margin-top: -15px;
+  margin-left: 50px;
+}
+
+.length {
+  height: 100%;
+}
+
+.form p {
+  font-size: 30px;
+  padding: 1px;
+  text-align: center;
+}
+.btn-input {
+  outline: 0;
+  border-radius: 10px;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.btn-input:hover {
+  background-color: #d3f8f9;
+  transition: all 1s ease 0s;
+}
+.btn-input:focus {
+  background-color: #d3f8f9;
+  transition: all 1s ease 0s;
+}
+.btnn {
+  text-transform: uppercase;
+  outline: 0;
+  border-radius: 10px;
+  /* background: #1adbe5; */
+  background-color: #007bff;
+  border-color: #007bff;
+  width: auto;
+  border: 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btnn:hover,
+.btnn:active,
+.btnn:focus {
+  background-color: #06c5cf;
+  transition: all 1s ease 0s;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 15px;
+}
+.form .message a {
+  color: #06c5cf;
+  text-decoration: none;
+}
+
+/* css for success and error */
+.success {
+  color: #2ed573;
+}
+
+.error {
+  color: #ff4757;
+}
+
+.text-center {
+  text-align: center;
+}
